@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: #f4f4f4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px 15px 10px;
+  line-height: 1.3;
+}
+
+/* Full-width stacked media block (hero images) */
+.images-container {
+  margin: 0 auto 20px;
+  width: 80%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+}
+
+.images-container img,
+.images-container video {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.image-description {
+  padding: 0 15px 15px;
+  text-align: center;
+}
+
+/* Scalable gallery grid — works the same whether it holds 4 tracks or 400 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  width: 80%;
+  margin: 10px auto 60px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  background: #161616;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+}
+
+.card-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+  padding: 10px;
+}
+
+.card-title {
+  padding: 10px 12px 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gallery-status {
+  width: 80%;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Track detail page */
+.track-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #6fcf97;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.track-page video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.30);
+}
+
+.track-page h1 {
+  text-align: left;
+  padding: 20px 0 6px;
+}
+
+.track-page p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Stack side-by-side items on small screens */
+@media (max-width: 640px) {
+  .images-container {
+    width: 100%;
+  }
+  .gallery-grid {
+    width: 92%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
